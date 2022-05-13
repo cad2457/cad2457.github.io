@@ -4,13 +4,14 @@
         <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
     </head>
     <body>
-        <div id="gd"></div>
+        <div id="tester" style="width:600px;height:250px;"></div>
     
         <script>
-            Plotly.newPlot("gd", /* JSON object */ {
-                "data": [{ "y": [1, 2, 3] }],
-                "layout": { "width": 600, "height": 400}
-            })
+            TESTER = document.getElementById('tester');
+            Plotly.newPlot( TESTER, [{
+            x: [1, 2, 3, 4, 5],
+            y: [1, 2, 4, 8, 16] }], {
+            margin: { t: 0 } } );
         </script>
     </body>
 </html>
