@@ -8,14 +8,14 @@
     
         <script>
             async function fetchAsync (url) {
-                let response = await fetch(url);
+                let response = await fetch(url, {mode: 'cors'});
                 let data = await response.json();
                 return data;
             }
             var test = fetchAsync("https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=Eros");
 
             console.log(typeof(test));
-            
+
             TESTER = document.getElementById('tester');
 
             var pointCount = 31;
