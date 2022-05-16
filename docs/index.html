@@ -7,6 +7,15 @@
         <div id="tester" style="width:600px;height:600px;"></div>
     
         <script>
+            async function fetchAsync (url) {
+                let response = await fetch(url);
+                let data = await response.json();
+                return data;
+            }
+            var test = fetchAsync("https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=Eros");
+
+            console.log(typeof(test));
+            
             TESTER = document.getElementById('tester');
 
             var pointCount = 31;
